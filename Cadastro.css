@@ -5,10 +5,15 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url(imagemPalco.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
-    background: #2d3e50;
+    background-color: darkred;
     color: white;
     text-align: center;
     padding: 20px;
@@ -78,7 +83,7 @@ input {
 }
 
 button {
-    background-color: #2d3e50;
+    background-color: darkred;
     color: white;
     border: none;
     padding: 12px;
