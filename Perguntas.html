@@ -1,48 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recomendações Musicais</title>
-    <link rel="stylesheet" href="Perguntas.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recomendações Musicais</title>
+  <link rel="stylesheet" href="Perguntas.css" />
+  <style>
+    #playMusicBtn {
+      background-color: #2d3e50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 20px auto;
+      display: block;
+      border-radius: 5px;
+    }
+
+    #playMusicBtn:hover {
+      background-color: #4a6b81;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Recomendações de Estilos Musicais</h1>
-    </header>
-    <main>
-        <section class="perguntas">
-            <h2>Responda algumas perguntas para encontrar o estilo musical ideal!</h2>
-            <form id="musicForm">
-                <p>Qual é o seu humor hoje?</p>
-                <label><input type="radio" name="mood" value="feliz"> Feliz</label>
-                <label><input type="radio" name="mood" value="triste"> Triste</label>
-                <label><input type="radio" name="mood" value="motivado"> Motivado</label>
-                <label><input type="radio" name="mood" value="relaxado"> Relaxado</label>
-                
-                <p>Prefere músicas mais calmas ou agitadas?</p>
-                <label><input type="radio" name="tempo" value="calma"> Calma</label>
-                <label><input type="radio" name="tempo" value="agitada"> Agitada</label>
-                
-                <p>Gosta mais de músicas com letra ou instrumentais?</p>
-                <label><input type="radio" name="letra" value="letra"> Com letra</label>
-                <label><input type="radio" name="letra" value="instrumental"> Instrumental</label>
-                
-                <p>Você prefere artistas clássicos ou modernos?</p>
-                <label><input type="radio" name="epoca" value="classico"> Clássicos</label>
-                <label><input type="radio" name="epoca" value="moderno"> Modernos</label>
-                
-                <p>Você gosta mais de músicas nacionais ou internacionais?</p>
-                <label><input type="radio" name="origem" value="nacional"> Nacional</label>
-                <label><input type="radio" name="origem" value="internacional"> Internacional</label>
-                
-                <button type="submit">Obter Recomendações</button>
-            </form>
-        </section>
-        <section class="recommendations">
-            <h2>Estilos Musicais Recomendados</h2>
-            <ul id="musicList"></ul>
-        </section>
-    </main>
+  <header>
+    <h1>Recomendações de Estilos Musicais</h1>
+  </header>
+
+  <!-- Botão para iniciar música -->
+  <button id="playMusicBtn">Iniciar Música de Fundo 🎵</button>
+
+  <main>
+    <section class="perguntas">
+      <h2>Responda algumas perguntas para encontrar o estilo musical ideal!</h2>
+      <form id="musicForm">
+        <p>Qual é o seu humor hoje?</p>
+        <label><input type="radio" name="mood" value="feliz" /> Feliz</label>
+        <label><input type="radio" name="mood" value="triste" /> Triste</label>
+        <label><input type="radio" name="mood" value="motivado" /> Motivado</label>
+        <label><input type="radio" name="mood" value="relaxado" /> Relaxado</label>
+
+        <p>Prefere músicas mais calmas ou agitadas?</p>
+        <label><input type="radio" name="tempo" value="calma" /> Calma</label>
+        <label><input type="radio" name="tempo" value="agitada" /> Agitada</label>
+
+        <p>Gosta mais de músicas com letra ou instrumentais?</p>
+        <label><input type="radio" name="letra" value="letra" /> Com letra</label>
+        <label><input type="radio" name="letra" value="instrumental" /> Instrumental</label>
+
+        <p>Você prefere artistas clássicos ou modernos?</p>
+        <label><input type="radio" name="epoca" value="classico" /> Clássicos</label>
+        <label><input type="radio" name="epoca" value="moderno" /> Modernos</label>
+
+        <p>Você gosta mais de músicas nacionais ou internacionais?</p>
+        <label><input type="radio" name="origem" value="nacional" /> Nacional</label>
+        <label><input type="radio" name="origem" value="internacional" /> Internacional</label>
+
+        <button type="submit">Obter Recomendações</button>
+      </form>
+    </section>
+
+    <section class="recommendations">
+      <h2>Estilos Musicais Recomendados</h2>
+      <ul id="musicList"></ul>
+    </section>
+  </main>
+
+  <!-- Áudio escondido -->
+  <audio id="bgMusic" loop style="display: none;">
+    <source src="pericles-ate-que-durou-7307fede.mp3"type="audio/mpeg" />
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script src="Perguntas.js"></script>
+  <script>
+    const btn = document.getElementById("playMusicBtn");
+    const music = document.getElementById("bgMusic");
+
+    btn.addEventListener("click", () => {
+      music.play();
+      btn.style.display = "none"; // esconde o botão depois que clicar
+    });
+  </script>
 </body>
 </html>
