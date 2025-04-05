@@ -1,20 +1,20 @@
 document.getElementById("musicForm").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    // Obtém as respostas do formulário
+    
     const mood = document.querySelector('input[name="mood"]:checked');
     const tempo = document.querySelector('input[name="tempo"]:checked');
     const letra = document.querySelector('input[name="letra"]:checked');
     const epoca = document.querySelector('input[name="epoca"]:checked');
     const origem = document.querySelector('input[name="origem"]:checked');
 
-    // Verifica se todas as perguntas foram respondidas
+    
     if (!mood || !tempo || !letra || !epoca || !origem) {
         alert("Por favor, responda todas as perguntas.");
         return;
     }
 
-    // Cria um objeto com as respostas
+    
     const respostas = {
         mood: mood.value,
         tempo: tempo.value,
@@ -23,11 +23,11 @@ document.getElementById("musicForm").addEventListener("submit", function(event) 
         origem: origem.value
     };
 
-    // Função que vai recomendar estilos com base nas respostas
+   
     function obterRecomendacoes(respostas) {
         const recomendacoes = [];
         
-        // Condições fictícias de recomendações
+        
         if (respostas.mood === "feliz" && respostas.tempo === "agitada") {
             recomendacoes.push("Pop");
         }
@@ -50,12 +50,12 @@ document.getElementById("musicForm").addEventListener("submit", function(event) 
         return recomendacoes;
     }
 
-    // Obter as recomendações com base nas respostas
+   
     const estilos = obterRecomendacoes(respostas);
 
-    // Exibir as recomendações
+    
     const musicList = document.getElementById("musicList");
-    musicList.innerHTML = ""; // Limpa a lista anterior
+    musicList.innerHTML = ""; 
 
     if (estilos.length > 0) {
         estilos.forEach(estilo => {
