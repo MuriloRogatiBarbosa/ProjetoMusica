@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recomendações Musicais</title>
+  <link rel="stylesheet" href="../css/css.perguntas.css" />
+</head>
+<body>
+
+  <video autoplay muted loop class="video-bg">
+    <source src="..//midia/midia.perguntas.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo HTML5.
+  </video>
+
+  <div class="form-container">
+    <div class="form-box">
+      <h1>Descubra seu Estilo Musical</h1>
+      <form id="musicForm">
+        <p>Qual é o seu humor hoje?</p>
+        <label><input type="radio" name="mood" value="feliz" /> Feliz</label>
+        <label><input type="radio" name="mood" value="triste" /> Triste</label>
+        <label><input type="radio" name="mood" value="motivado" /> Motivado</label>
+        <label><input type="radio" name="mood" value="relaxado" /> Relaxado</label>
+
+        <p>Prefere músicas mais calmas ou agitadas?</p>
+        <label><input type="radio" name="tempo" value="calma" /> Calma</label>
+        <label><input type="radio" name="tempo" value="agitada" /> Agitada</label>
+
+        <p>Gosta mais de músicas com letra ou instrumentais?</p>
+        <label><input type="radio" name="letra" value="letra" /> Com letra</label>
+        <label><input type="radio" name="letra" value="instrumental" /> Instrumental</label>
+
+        <p>Você prefere artistas clássicos ou modernos?</p>
+        <label><input type="radio" name="epoca" value="classico" /> Clássicos</label>
+        <label><input type="radio" name="epoca" value="moderno" /> Modernos</label>
+
+        <p>Você gosta mais de músicas nacionais ou internacionais?</p>
+        <label><input type="radio" name="origem" value="nacional" /> Nacional</label>
+        <label><input type="radio" name="origem" value="internacional" /> Internacional</label>
+
+        <button type="submit">Obter Recomendações</button>
+      </form>
+    </div>
+  </div>
+<script src="../js/Perguntas.js"></script>
+</body>
+</html>

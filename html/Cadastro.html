@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cadastro</title>
+  <link rel="stylesheet" href="../css/css.cadastro.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="left-section">
+      <h1><strong>Comece a descobrir</strong>
+      <ul>
+        <li>✔ Descobre qual musica mais te deseja</li>
+        <li>✔ Gere sugestões, de musica com IA</li>
+      </ul>
+      <div class="video-preview">
+        <img src="../midia/imagem.cadastro.png" alt="Preview" />
+      </div>
+    </section>
+    <section class="cadastro">
+      <h2>Crie sua conta gratuita</h2>
+      <button class="google-button">Continuar com Google</button>
+      <p class="divider">ou</p>
+      <form id="signupForm">
+        <div class="form-group">
+          <label for="name">Nome completo:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button type="submit">Cadastrar grátis</button>
+      </form>
+      <p class="conJ">Já tem uma conta? <a href="../Apresentacao.html">Entrar</a></p>
+    </section>
+  </main>
+  <script src="../js/Cadastro.js"></script>
+</body>
+</html>
