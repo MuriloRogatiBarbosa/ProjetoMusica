@@ -10,6 +10,18 @@ body, html {
   color: white;
 }
 
+.usuario-logado {
+  position: relative;        /* fixa no topo da página */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  color: #ff4081;
+  font-size: 2rem;
+  
+  text-align: center;      
+}
+
 
 .bg-video {
   position: fixed;
@@ -102,10 +114,7 @@ footer {
   text-align: center;
 }
 
-<<<<<<< HEAD:Apresentacao.Css
 
-=======
->>>>>>> ed2b3bd (mensagem descritiva do que foi alterado):css/css.apresentacao.Css
 main {
   display: flex;
   flex: 1;
@@ -117,11 +126,7 @@ main {
 .content {
   flex: 2;
   min-width: 250px;
-<<<<<<< HEAD:Apresentacao.Css
   background: rgba(255, 255, 255, 0.1); 
-=======
-  background: rgba(255, 255, 255, 0.1);
->>>>>>> ed2b3bd (mensagem descritiva do que foi alterado):css/css.apresentacao.Css
   padding: 20px;
   color: white;
 }
