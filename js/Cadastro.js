@@ -10,16 +10,14 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
         return;
     }
 
-    // Cria objeto usuário
+    // Cria objeto usuário para JSON
     const usuario = {
         nome: name,
         email: email,
-        senha: password  // Só pra exemplo; em app real nunca salvar senha assim!
     };
 
-    // Converte objeto para JSON e salva
+    // Converte objeto para JSON e salva o nome do usuario
     localStorage.setItem("usuario", JSON.stringify(usuario));
 
-    // Redireciona para página de apresentação
     window.location.href = "../Apresentacao.html";
 });
